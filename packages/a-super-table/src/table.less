@@ -1,0 +1,166 @@
+.a-supergrid {
+  overflow: hidden;
+  background: #fff;
+  font-size: 9pt;
+  position: relative;
+  outline: none;
+  display: block;
+
+  &-border {
+    border: 1px solid #9ebcd6;
+    overflow: hidden;
+    position: relative;
+    border: 0px;
+  }
+}
+
+// 头部
+.a-supergrid {
+  &-header {
+    width: auto;
+    overflow: hidden;
+    background: #fafafa;
+    border-bottom: #c5c5c5 1px solid;
+    height: 25px;
+    position: relative;
+  }
+
+  &-headercell,
+  &-header-frozencell-right {
+    border-bottom: #c5c5c5 1px solid;
+    border-right: #c5c5c5 1px solid;
+    line-height: 16px;
+    background: #fafafa;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 25px;
+  }
+
+  &-frozencell {
+    z-index: 10;
+  }
+
+  &-header-frozencell-right {
+    left: auto;
+    border-left: #d4d6d9 1px solid;
+    z-index: 10;
+  }
+
+  &-splitter {
+    position: absolute;
+    overflow: hidden;
+    width: 5px;
+    background: rgb(77, 144, 254);
+    cursor: col-resize;
+    opacity: .0;
+    -moz-opacity: .0;
+    filter: alpha(opacity=0);
+    z-index: 10;
+
+    &.draggable {
+      opacity: 1;
+      -moz-opacity: 1;
+      filter: alpha(opacity=1);
+    }
+  }
+}
+
+// 内容
+.a-supergrid {
+  &-viewport {
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  &-cells,
+  &-fixed,
+  &-fixed-right {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+  &-fixed-right {
+    left: auto;
+    right: 0;
+    background: #fff;
+    border-left: #d4d6d9 1px solid;
+  }
+
+  &-tooltip {
+    position: absolute;
+    border: solid 1px black;
+    background: #ffffe1;
+    right: 20px;
+    top: 5px;
+    padding: 3px;
+    z-index: 10000;
+    width: 100px;
+    display: none;
+  }
+
+  &-row {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    left: 0px;
+  }
+
+  &-cell {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  &-cell,
+  &-headercell {
+    border: 0;
+    border-bottom: #d4d6d9 1px solid;
+    border-right: #d4d6d9 1px solid;
+    line-height: 21px;
+    cursor: default;
+    font-family: tahoma, arial, verdana, sans-serif;
+    font-size: 9pt;
+    padding: 0px;
+  }
+}
+
+
+// X轴 Y轴
+.a-supergrid {
+
+  &-hscroller,
+  &-vscroller {
+    position: absolute;
+    z-index: 100;
+    overflow: auto;
+    height: 18px;
+  }
+
+  &-hscroller {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    overflow-x: scroll;
+  }
+
+  &-vscroller {
+    width: 18px;
+    right: 0;
+    top: 0;
+    overflow-y: scroll;
+  }
+
+  &-hscrollercontent,
+  &-vscrollercontent {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}

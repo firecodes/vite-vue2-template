@@ -1,0 +1,114 @@
+.n-scrollbar {
+
+
+overflow: hidden;
+position: relative;
+z-index: auto;
+height: 100%;
+
+
+}
+
+.n-scrollbar > .n-scrollbar-container {
+
+
+width: 100%;
+overflow: scroll;
+height: 100%;
+max-height: inherit;
+scrollbar-width: none;
+
+
+}
+
+.n-scrollbar > .n-scrollbar-container::-webkit-scrollbar {
+
+
+width: 0;
+height: 0;
+
+
+}
+
+.n-scrollbar > .n-scrollbar-container > .n-scrollbar-content {
+
+
+overflow: hidden;
+min-width: 100%;
+
+
+}
+
+.n-scrollbar > .n-scrollbar-rail {
+
+
+position: absolute;
+pointer-events: none;
+user-select: none;
+
+
+}
+
+.n-scrollbar > .n-scrollbar-rail.n-scrollbar-rail--horizontal {
+
+
+left: 2px;
+right: 2px;
+bottom: 4px;
+
+
+}
+
+.n-scrollbar > .n-scrollbar-rail.n-scrollbar-rail--horizontal > .n-scrollbar-rail__scrollbar {
+  right: 0;
+}
+
+.n-scrollbar > .n-scrollbar-rail.n-scrollbar-rail--vertical {
+
+
+right: 4px;
+top: 2px;
+bottom: 2px;
+
+
+}
+
+.n-scrollbar > .n-scrollbar-rail.n-scrollbar-rail--vertical > .n-scrollbar-rail__scrollbar {
+  bottom: 0;
+}
+
+.n-scrollbar > .n-scrollbar-rail.n-scrollbar-rail--disabled > .n-scrollbar-rail__scrollbar {
+  pointer-events: none;
+}
+
+.n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar {
+
+
+position: absolute;
+cursor: pointer;
+pointer-events: all;
+background-color: rgba(0, 0, 0, 0.25);
+transition: background-color .2s cubic-bezier(.4, 0, .2, 1);
+
+
+}
+
+.n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar.n-fade-in-transition-enter-active {
+  transition: all 0.2s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar.n-fade-in-transition-leave-active {
+  transition: all 0.2s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar.n-fade-in-transition-enter-from, .n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar.n-fade-in-transition-leave-to {
+  opacity: 0;
+}
+
+.n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar.n-fade-in-transition-leave-from, .n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar.n-fade-in-transition-enter-to {
+  opacity: 1;
+}
+
+.n-scrollbar > .n-scrollbar-rail > .n-scrollbar-rail__scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,61 @@
+.n-scrollbar {
+  overflow: hidden;
+  position: relative;
+  z-index: auto;
+  height: 100%;
+  &-container {
+    width: 100%;
+    overflow: scroll;
+    height: 100%;
+    max-height: inherit;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  &-container > &-content {
+    overflow: hidden;
+    min-width: 100%;
+  }
+
+  & > &-rail{
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    &__scrollbar{
+      position: absolute;
+      cursor: pointer;
+      pointer-events: all;
+      background-color: rgba(0, 0, 0, 0.25);
+      transition: background-color .2s cubic-bezier(.4, 0, .2, 1);
+    }
+  } 
+  &-rail--vertical {
+    right: 4px;
+    top: 2px;
+    bottom: 2px;
+  }
+  &-rail &-rail__scrollbar {
+    bottom: 0;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &-rail--horizontal {
+    left: 2px;
+    right: 2px;
+    bottom: 4px;
+  }
+  &-rail > &-rail__scrollbar {
+    position: absolute;
+    cursor: pointer;
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: background-color .2s cubic-bezier(.4, 0, .2, 1);
+  }
+  &-rail--horizontall > &-rail__scrollbar {
+    right: 0;
+  }
+}
