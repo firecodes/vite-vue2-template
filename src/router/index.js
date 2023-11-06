@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const routes = [...demoRouters];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes,
   scrollBehavior() {
     return { x: 0, y: 0 };

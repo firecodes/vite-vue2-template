@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <template v-for="(route, index) in routersList">
-      <el-link :key="index" class="link" :href="route.path">{{ route.name }}</el-link>
+      <el-link :key="index" class="link" :href="`/#${route.path}`">{{ route.name }}</el-link>
     </template>
     <router-view />
   </div>
@@ -16,7 +16,7 @@ export default {
     };
   },
   computed: {},
-  created() {},
+  created() { },
   methods: {},
 };
 </script>

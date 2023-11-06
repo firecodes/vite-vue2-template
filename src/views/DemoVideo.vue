@@ -1,6 +1,7 @@
 <template>
   <div class="demo-image__preview">
     <a-image style="width: 100px; height: 100px" lazy :src="url" :preview-src-list="previewSrcList"></a-image>
+    <h3>点击图片显示大图，大小图显示不对，是参数没有对应,小图id和大图id</h3>
   </div>
 </template>
 <script>
@@ -12,7 +13,7 @@ export default {
     };
   },
   computed: {},
-  created() {},
+  created() { },
   methods: {
     getData() {
       const list = [
